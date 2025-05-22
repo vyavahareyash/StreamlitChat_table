@@ -1,0 +1,19 @@
+Field,Descriptions,Datatype
+MANDT,Client,CLNT
+KTOPL,Chart of Accounts,CHAR
+SAKNR,G/L Account Number,CHAR
+XBILK,Indicator: Account is a balance sheet account?,CHAR
+SAKAN,"G/L account number, significant length",CHAR
+BILKT,Group Account Number,CHAR
+ERDAT,Date on which the Record Was Created,DATS
+ERNAM,Name of Person who Created the Object,CHAR
+GVTYP,P&L statement account type,CHAR
+KTOKS,G/L Account Group,CHAR
+MUSTR,Number of the sample account,CHAR
+VBUND,Company ID of trading partner,CHAR
+XLOEV,Indicator: Account marked for deletion?,CHAR
+XSPEA,Indicator: account is blocked for creation ?,CHAR
+XSPEB,Indicator: Is Account Blocked for Posting?,CHAR
+XSPEP,Indicator: account blocked for planning ?,CHAR
+MCOD1,Search Term for Using Matchcode,CHAR
+FUNC_AREA,Functional Area,CHAR

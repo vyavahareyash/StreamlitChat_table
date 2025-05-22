@@ -1,0 +1,97 @@
+{
+    "tables": [{
+        "name": "SKA1",
+        "description": "G/L Account Master (Chart of Accounts)",
+        "columns": [{
+                "name": "MANDT",
+                "description": "Client",
+                "type": "CLNT"
+            },
+            {
+                "name": "KTOPL",
+                "description": "Chart of Accounts",
+                "type": "CHAR"
+            },
+            {
+                "name": "SAKNR",
+                "description": "G/L Account Number",
+                "type": "CHAR"
+            },
+            {
+                "name": "XBILK",
+                "description": "Indicator: Account is a balance sheet account?",
+                "type": "CHAR"
+            },
+            {
+                "name": "SAKAN",
+                "description": "G/L account number, significant length",
+                "type": "CHAR"
+            },
+            {
+                "name": "BILKT",
+                "description": "Group Account Number",
+                "type": "CHAR"
+            },
+            {
+                "name": "ERDAT",
+                "description": "Date on which the Record Was Created",
+                "type": "DATS"
+            },
+            {
+                "name": "ERNAM",
+                "description": "Name of Person who Created the Object",
+                "type": "CHAR"
+            },
+            {
+                "name": "GVTYP",
+                "description": "P&L statement account type",
+                "type": "CHAR"
+            },
+            {
+                "name": "KTOKS",
+                "description": "G/L Account Group",
+                "type": "CHAR"
+            },
+            {
+                "name": "MUSTR",
+                "description": "Number of the sample account",
+                "type": "CHAR"
+            },
+            {
+                "name": "VBUND",
+                "description": "Company ID of trading partner",
+                "type": "CHAR"
+            },
+            {
+                "name": "XLOEV",
+                "description": "Indicator: Account marked for deletion?",
+                "type": "CHAR"
+            },
+            {
+                "name": "XSPEA",
+                "description": "Indicator: account is blocked for creation ?",
+                "type": "CHAR"
+            },
+            {
+                "name": "XSPEB",
+                "description": "Indicator: Is Account Blocked for Posting?",
+                "type": "CHAR"
+            },
+            {
+                "name": "XSPEP",
+                "description": "Indicator: account blocked for planning ?",
+                "type": "CHAR"
+            },
+            {
+                "name": "MCOD1",
+                "description": "Search Term for Using Matchcode",
+                "type": "CHAR"
+            },
+            {
+                "name": "FUNC_AREA",
+                "description": "Functional Area",
+                "type": "CHAR"
+            }
+        ]
+    }]
+}

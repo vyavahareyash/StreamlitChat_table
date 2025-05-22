@@ -181,3 +181,5 @@ cython_debug/
 .cursorindexingignore
 
 notebooks/
+.DS_Store
+T2H/__pycache__/
