@@ -103,18 +103,32 @@ with st.form(key="question_form", clear_on_submit=True):
 
 # Process the user input
 if st.session_state.form_submitted and user_question:
-    # Add user message to chat history
-    st.session_state.chat_history.append(create_user_message(user_question))
-    
-    # Process the question and get response
-    bot_response = process_user_question(user_question)
-    
-    # Add bot response to chat history
-    st.session_state.chat_history.append(bot_response)
-    
-    # Reset form submitted state
+    # Step 1: Add user message immediately
+    user_msg = create_user_message(user_question)
+    st.session_state.chat_history.append(user_msg)
+
+    # Step 2: Reset form state
     st.session_state.form_submitted = False
+
+    # Step 3: Trigger rerun to show user message immediately
     st.rerun()
+
+# If last message was from the user and no bot response yet
+if (
+    st.session_state.chat_history and
+    st.session_state.chat_history[-1]["role"] == "user" and
+    (
+        len(st.session_state.chat_history) == 1 or
+        st.session_state.chat_history[-2]["role"] != "bot"
+    )
+):
+    # Show loading spinner while generating bot response
+    with st.spinner("Bot is thinking..."):
+        user_question = st.session_state.chat_history[-1]["content"]
+        bot_response = process_user_question(user_question)
+        st.session_state.chat_history.append(bot_response)
+        st.rerun()
+
 
 
 # Add a footer
